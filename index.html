@@ -1,0 +1,1924 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="theme-color" content="#130b25">
+
+<title>For Amber — A Little Universe Made For You ♡</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+
+
+:root{
+
+  --bg:#080611;
+
+  --panel:rgba(255,255,255,.075);
+
+  --line:rgba(255,255,255,.13);
+
+  --pink:#ff6fae;
+
+  --rose:#ff9fc8;
+
+  --gold:#ffd58a;
+
+  --lav:#b9a4ff;
+
+  --text:#fff8fc;
+
+  --muted:#c9bdd0
+
+}
+
+
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth}
+
+body{
+
+  background:radial-gradient(circle at 50% -10%,#3a1746 0,#10091b 36%,#06050b 75%);
+
+  color:var(--text);
+
+  font-family:"DM Sans",sans-serif;
+
+  overflow-x:hidden
+
+}
+
+button{font:inherit;color:inherit}
+
+.hidden{display:none!important}
+
+
+
+#stars{
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:-2;
+
+  background-image:
+
+    radial-gradient(#fff 1px,transparent 1px),
+
+    radial-gradient(#ffb7d8 1px,transparent 1px);
+
+  background-size:97px 97px,157px 157px;
+
+  background-position:10px 20px,60px 80px;
+
+  opacity:.18
+
+}
+
+
+
+.glow{
+
+  position:fixed;
+
+  width:45vw;
+
+  height:45vw;
+
+  border-radius:50%;
+
+  filter:blur(90px);
+
+  opacity:.16;
+
+  pointer-events:none;
+
+  z-index:-1;
+
+  background:#ff4d9d;
+
+  left:-15vw;
+
+  top:20vh
+
+}
+
+
+
+.glow.g2{
+
+  background:#8b70ff;
+
+  right:-18vw;
+
+  left:auto;
+
+  top:55vh
+
+}
+
+
+
+#progress{
+
+  position:fixed;
+
+  top:0;
+
+  left:0;
+
+  height:3px;
+
+  background:linear-gradient(90deg,var(--pink),var(--gold));
+
+  z-index:100;
+
+  width:0;
+
+  box-shadow:0 0 14px var(--pink)
+
+}
+
+
+
+section{
+
+  min-height:100svh;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:90px 6vw;
+
+  position:relative
+
+}
+
+
+
+.container{
+
+  width:min(1120px,100%);
+
+  margin:auto
+
+}
+
+
+
+.eyebrow{
+
+  letter-spacing:.25em;
+
+  text-transform:uppercase;
+
+  font-size:.7rem;
+
+  color:#eab9d2;
+
+  margin-bottom:20px
+
+}
+
+
+
+.serif{font-family:"Cormorant Garamond",serif}
+
+.script{font-family:"Great Vibes",cursive}
+
+
+
+h1{
+
+  font-size:clamp(4rem,11vw,9.2rem);
+
+  line-height:.78;
+
+  letter-spacing:-.05em;
+
+  font-weight:500
+
+}
+
+
+
+h2{
+
+  font-size:clamp(2.7rem,6vw,5.5rem);
+
+  line-height:.9;
+
+  font-weight:500;
+
+  letter-spacing:-.035em
+
+}
+
+
+
+.lead{
+
+  font-size:clamp(1rem,2vw,1.25rem);
+
+  line-height:1.8;
+
+  color:var(--muted);
+
+  max-width:680px
+
+}
+
+
+
+.btn{
+
+  border:1px solid rgba(255,255,255,.22);
+
+  background:rgba(255,255,255,.08);
+
+  backdrop-filter:blur(15px);
+
+  padding:14px 23px;
+
+  border-radius:999px;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:9px
+
+}
+
+
+
+.btn:hover{
+
+  transform:translateY(-3px);
+
+  background:rgba(255,255,255,.14);
+
+  box-shadow:0 12px 35px #0005
+
+}
+
+
+
+.btn.primary{
+
+  background:linear-gradient(100deg,#ff579f,#a36bff);
+
+  border:0;
+
+  box-shadow:0 12px 45px #ff579f3b
+
+}
+
+
+
+#intro{
+
+  overflow:hidden;
+
+  text-align:center
+
+}
+
+
+
+.intro-orbit{
+
+  position:absolute;
+
+  width:min(74vw,720px);
+
+  aspect-ratio:1;
+
+  border:1px solid #ffffff13;
+
+  border-radius:50%;
+
+  animation:spin 28s linear infinite
+
+}
+
+
+
+.intro-orbit:before,
+
+.intro-orbit:after{
+
+  content:"";
+
+  position:absolute;
+
+  width:11px;
+
+  height:11px;
+
+  border-radius:50%;
+
+  background:#ffd0e5;
+
+  box-shadow:0 0 25px #ff70ad;
+
+  top:5%;
+
+  left:50%
+
+}
+
+
+
+.intro-orbit:after{
+
+  top:auto;
+
+  bottom:8%;
+
+  left:13%;
+
+  background:#c7b8ff
+
+}
+
+
+
+.heart{
+
+  font-size:clamp(3rem,9vw,7rem);
+
+  filter:drop-shadow(0 0 25px #ff5eaa);
+
+  animation:float 3s ease-in-out infinite
+
+}
+
+
+
+.intro-copy{
+
+  position:relative;
+
+  z-index:2
+
+}
+
+
+
+.intro-copy h1 span{
+
+  color:var(--rose);
+
+  text-shadow:0 0 35px #ff5eaa44
+
+}
+
+
+
+.scrollhint{
+
+  position:absolute;
+
+  bottom:28px;
+
+  font-size:.7rem;
+
+  letter-spacing:.2em;
+
+  color:#988c9d;
+
+  animation:breathe 2s infinite
+
+}
+
+
+
+@keyframes spin{
+
+  to{transform:rotate(360deg)}
+
+}
+
+
+
+@keyframes float{
+
+  50%{transform:translateY(-12px) rotate(-3deg)}
+
+}
+
+
+
+@keyframes breathe{
+
+  50%{opacity:.4;transform:translateY(5px)}
+
+}
+
+
+
+.card{
+
+  background:linear-gradient(145deg,#ffffff0d,#ffffff04);
+
+  border:1px solid var(--line);
+
+  border-radius:30px;
+
+  box-shadow:0 30px 90px #0005;
+
+  backdrop-filter:blur(20px)
+
+}
+
+
+
+.story-grid{
+
+  display:grid;
+
+  grid-template-columns:1.05fr .95fr;
+
+  gap:28px;
+
+  align-items:stretch
+
+}
+
+
+
+.letter{
+
+  padding:clamp(28px,5vw,58px);
+
+  position:relative;
+
+  overflow:hidden
+
+}
+
+
+
+.letter:after{
+
+  content:"♡";
+
+  position:absolute;
+
+  right:28px;
+
+  top:10px;
+
+  font:8rem "Great Vibes";
+
+  color:#ff7eaf0c
+
+}
+
+
+
+.letter p{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:clamp(1.15rem,2vw,1.45rem);
+
+  line-height:1.65;
+
+  color:#eee0e8;
+
+  margin:20px 0
+
+}
+
+
+
+.signature{
+
+  font:2.7rem "Great Vibes";
+
+  color:var(--rose);
+
+  margin-top:25px
+
+}
+
+
+
+.quote-card{
+
+  padding:40px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  min-height:100%
+
+}
+
+
+
+.quote{
+
+  font:clamp(2rem,4vw,3.5rem) "Cormorant Garamond";
+
+  line-height:1.1;
+
+  color:#fff
+
+}
+
+
+
+.quote em{color:var(--rose)}
+
+
+
+.reasons{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:16px;
+
+  margin-top:45px
+
+}
+
+
+
+.reason{
+
+  padding:27px;
+
+  border-radius:24px;
+
+  border:1px solid var(--line);
+
+  background:#ffffff06;
+
+  transition:.35s
+
+}
+
+
+
+.reason:hover{
+
+  transform:translateY(-8px);
+
+  background:#ffffff0b
+
+}
+
+
+
+.reason b{
+
+  font-family:"Cormorant Garamond";
+
+  font-size:1.55rem;
+
+  display:block;
+
+  margin:13px 0 8px
+
+}
+
+
+
+.reason p{
+
+  color:#a99eae;
+
+  line-height:1.6;
+
+  font-size:.92rem
+
+}
+
+
+
+#night{
+
+  text-align:center;
+
+  background:radial-gradient(circle at 50% 70%,#29174644,transparent 45%)
+
+}
+
+
+
+.moon{
+
+  width:min(320px,58vw);
+
+  aspect-ratio:1;
+
+  border-radius:50%;
+
+  background:radial-gradient(circle at 35% 30%,#fffdf0,#f7dce8 40%,#c9a9db 78%);
+
+  box-shadow:0 0 80px #f9d6ed77,0 0 200px #b58be52a;
+
+  margin:0 auto 45px;
+
+  position:relative
+
+}
+
+
+
+.moon:after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:50%;
+
+  background:
+
+    radial-gradient(circle at 25% 50%,#8e769c22 0 7%,transparent 8%),
+
+    radial-gradient(circle at 67% 35%,#8e769c22 0 9%,transparent 10%),
+
+    radial-gradient(circle at 57% 75%,#8e769c22 0 6%,transparent 7%)
+
+}
+
+
+
+.night-line{
+
+  font:clamp(2.4rem,6vw,5.5rem) "Great Vibes";
+
+  color:#ffe9f3
+
+}
+
+
+
+.night-sub{
+
+  color:#bcb0c2;
+
+  max-width:620px;
+
+  margin:18px auto 30px;
+
+  line-height:1.8
+
+}
+
+
+
+#game{
+
+  background:linear-gradient(180deg,transparent,#14091d 30%,transparent)
+
+}
+
+
+
+.game-wrap{text-align:center}
+
+
+
+.gamebox{
+
+  position:relative;
+
+  height:450px;
+
+  margin-top:35px;
+
+  border-radius:32px;
+
+  border:1px solid var(--line);
+
+  background:radial-gradient(circle at 50% 50%,#30163f,#10091a);
+
+  overflow:hidden
+
+}
+
+
+
+.balloon{
+
+  position:absolute;
+
+  width:60px;
+
+  height:76px;
+
+  border-radius:50% 50% 45% 45%;
+
+  cursor:pointer;
+
+  box-shadow:inset -9px -10px 20px #0002,0 8px 25px #0005;
+
+  animation:balloonFloat 3s ease-in-out infinite
+
+}
+
+
+
+.balloon:after{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-28px;
+
+  left:50%;
+
+  height:30px;
+
+  border-left:1px solid #ffffff55
+
+}
+
+
+
+.balloon:before{
+
+  content:"";
+
+  position:absolute;
+
+  bottom:-5px;
+
+  left:50%;
+
+  transform:translateX(-50%);
+
+  border:5px solid transparent;
+
+  border-top-color:currentColor
+
+}
+
+
+
+.b1{background:#ff6fae;left:9%;bottom:-30px}
+
+.b2{background:#a98cff;left:28%;bottom:-80px;animation-delay:.5s}
+
+.b3{background:#ffd17b;left:50%;bottom:-40px;animation-delay:1s}
+
+.b4{background:#70d9d4;left:70%;bottom:-90px;animation-delay:1.4s}
+
+.b5{background:#ff91b7;left:84%;bottom:-20px;animation-delay:.8s}
+
+
+
+@keyframes balloonFloat{
+
+  50%{transform:translateY(-400px) rotate(8deg)}
+
+}
+
+
+
+.score{
+
+  font-size:1.05rem;
+
+  color:#d7cbd9;
+
+  margin:18px
+
+}
+
+
+
+.surprise{
+
+  font-family:"Cormorant Garamond";
+
+  font-size:1.6rem;
+
+  opacity:0;
+
+  transition:1s;
+
+  color:#ffeaf4
+
+}
+
+
+
+.surprise.show{opacity:1}
+
+
+
+#memories .timeline{
+
+  margin-top:45px;
+
+  border-left:1px solid #ffffff1e;
+
+  padding-left:35px;
+
+  display:grid;
+
+  gap:25px
+
+}
+
+
+
+.moment{
+
+  position:relative;
+
+  padding:25px 30px
+
+}
+
+
+
+.moment:before{
+
+  content:"";
+
+  position:absolute;
+
+  width:11px;
+
+  height:11px;
+
+  border-radius:50%;
+
+  background:var(--pink);
+
+  left:-41px;
+
+  top:33px;
+
+  box-shadow:0 0 20px var(--pink)
+
+}
+
+
+
+.moment h3{
+
+  font:2rem "Cormorant Garamond";
+
+  margin-bottom:7px
+
+}
+
+
+
+.moment p{
+
+  color:#aaa0ae;
+
+  line-height:1.65
+
+}
+
+
+
+#final{
+
+  text-align:center;
+
+  min-height:100svh
+
+}
+
+
+
+.final-heart{
+
+  font-size:4rem;
+
+  animation:float 2.5s infinite
+
+}
+
+
+
+.final h2{
+
+  margin:20px auto;
+
+  max-width:900px
+
+}
+
+
+
+.final p{
+
+  max-width:650px;
+
+  margin:0 auto 30px;
+
+  color:#c8bdc9;
+
+  line-height:1.8
+
+}
+
+
+
+.final-sign{
+
+  font:3rem "Great Vibes";
+
+  color:#ff91bc
+
+}
+
+
+
+#toast{
+
+  position:fixed;
+
+  left:50%;
+
+  bottom:82px;
+
+  transform:translate(-50%,20px);
+
+  background:#fff;
+
+  color:#271424;
+
+  padding:12px 18px;
+
+  border-radius:999px;
+
+  font-size:.88rem;
+
+  opacity:0;
+
+  pointer-events:none;
+
+  transition:.35s;
+
+  z-index:100
+
+}
+
+
+
+.toast-show{
+
+  opacity:1!important;
+
+  transform:translate(-50%,0)!important
+
+}
+
+
+
+#confetti{
+
+  position:fixed;
+
+  inset:0;
+
+  pointer-events:none;
+
+  z-index:200
+
+}
+
+
+
+@media(max-width:760px){
+
+  section{padding:75px 20px}
+
+  .story-grid{grid-template-columns:1fr}
+
+  .reasons{grid-template-columns:1fr}
+
+  .gamebox{height:390px}
+
+  .balloon{width:48px;height:63px}
+
+  .intro-orbit{width:90vw}
+
+  .letter,.quote-card{border-radius:24px}
+
+  .moment{padding:22px 18px}
+
+  h1{font-size:clamp(4rem,19vw,6rem)}
+
+}
+
+
+
+
+
+/* ============================= */
+
+/* Birthday music gate            */
+
+/* ============================= */
+
+
+
+#music-gate{
+
+  position:relative;
+
+  min-height:100vh;
+
+  display:grid;
+
+  place-items:center;
+
+  overflow:hidden;
+
+  background:radial-gradient(circle at 50% 35%,#4b2348 0,#1a1023 42%,#08070d 100%)
+
+}
+
+
+
+#music-gate:before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:-20%;
+
+  background:
+
+    radial-gradient(circle at 20% 30%,#ff7fb833,transparent 25%),
+
+    radial-gradient(circle at 80% 70%,#9b6cff2b,transparent 28%);
+
+  filter:blur(35px);
+
+  animation:gateGlow 8s ease-in-out infinite alternate
+
+}
+
+
+
+@keyframes gateGlow{
+
+  to{
+
+    transform:scale(1.12) rotate(3deg);
+
+    opacity:.75
+
+  }
+
+}
+
+
+
+.music-gate-card{
+
+  position:relative;
+
+  z-index:2;
+
+  width:min(680px,90vw);
+
+  padding:55px 35px;
+
+  text-align:center;
+
+  border:1px solid #ffffff1c;
+
+  border-radius:32px;
+
+  background:#160d1dcc;
+
+  backdrop-filter:blur(18px);
+
+  box-shadow:0 30px 100px #0008
+
+}
+
+
+
+.music-gate-card .music-note{
+
+  font-size:3rem;
+
+  color:#ff9bc5;
+
+  margin-bottom:12px;
+
+  animation:floatNote 3s ease-in-out infinite
+
+}
+
+
+
+@keyframes floatNote{
+
+  50%{transform:translateY(-8px)}
+
+}
+
+
+
+.music-gate-card h1{
+
+  font-size:clamp(3rem,9vw,6rem);
+
+  margin:8px 0 18px
+
+}
+
+
+
+.music-gate-card p{
+
+  max-width:520px;
+
+  margin:0 auto 28px;
+
+  color:#c8bdca;
+
+  line-height:1.8
+
+}
+
+
+
+.song-player{
+
+  width:min(560px,100%);
+
+  margin:25px auto 22px;
+
+  padding:18px;
+
+  border:1px solid #ffffff18;
+
+  border-radius:20px;
+
+  background:#ffffff08;
+
+  box-shadow:0 20px 70px #0008
+
+}
+
+
+
+.song-player audio{
+
+  width:100%;
+
+  height:44px
+
+}
+
+
+
+.song-label{
+
+  margin:0 0 12px;
+
+  color:#d8ccd8;
+
+  font-size:.9rem
+
+}
+
+
+
+.music-status{
+
+  font-size:.78rem;
+
+  letter-spacing:.16em;
+
+  text-transform:uppercase;
+
+  color:#a99cab;
+
+  margin-top:16px
+
+}
+
+
+
+.music-gate-card .btn.primary:disabled{
+
+  opacity:.55;
+
+  cursor:not-allowed
+
+}
+
+
+
+
+
+/* ============================= */
+
+/* Balloon reward                 */
+
+/* ============================= */
+
+
+
+.reward-title{
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:2rem;
+
+  color:#fff;
+
+  margin-bottom:24px
+
+}
+
+
+
+.reward-photo-wrap{
+
+  position:relative;
+
+  width:min(340px,85vw);
+
+  margin:0 auto
+
+}
+
+
+
+.reward-photo{
+
+  width:100%;
+
+  display:block;
+
+  border-radius:22px;
+
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+  opacity:0;
+
+  transform:scale(.85);
+
+  animation:rewardReveal 1.2s ease forwards
+
+}
+
+
+
+.reward-message{
+
+  margin-top:25px;
+
+  color:#fff;
+
+  font-size:1.15rem;
+
+  line-height:1.7;
+
+  opacity:0;
+
+  animation:messageReveal 1s ease 1s forwards
+
+}
+
+
+
+.reward-message p{
+
+  margin:6px 0
+
+}
+
+
+
+.reward-message .love-line{
+
+  color:var(--rose);
+
+  font-family:"Cormorant Garamond",serif;
+
+  font-size:1.45rem
+
+}
+
+
+
+.reward-message span{
+
+  display:block;
+
+  margin-top:10px;
+
+  color:rgba(255,255,255,.65);
+
+  font-size:.9rem
+
+}
+
+
+
+.heart-float{
+
+  position:absolute;
+
+  color:var(--rose);
+
+  font-size:1.8rem;
+
+  opacity:0;
+
+  animation:floatHeart 3s ease-in-out infinite
+
+}
+
+
+
+.heart-1{
+
+  left:-25px;
+
+  top:20%;
+
+  animation-delay:.5s
+
+}
+
+
+
+.heart-2{
+
+  right:-25px;
+
+  top:35%;
+
+  animation-delay:1.2s
+
+}
+
+
+
+.heart-3{
+
+  left:-15px;
+
+  bottom:15%;
+
+  animation-delay:1.8s
+
+}
+
+
+
+.heart-4{
+
+  right:-15px;
+
+  bottom:25%;
+
+  animation-delay:2.4s
+
+}
+
+
+
+@keyframes rewardReveal{
+
+  from{
+
+    opacity:0;
+
+    transform:scale(.85)
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:scale(1)
+
+  }
+
+}
+
+
+
+@keyframes messageReveal{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(15px)
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0)
+
+  }
+
+}
+
+
+
+@keyframes floatHeart{
+
+  0%,100%{
+
+    opacity:.3;
+
+    transform:translateY(8px)
+
+  }
+
+  50%{
+
+    opacity:1;
+
+    transform:translateY(-12px)
+
+  }
+
+}
+
+
+
+
+
+/* ============================= */
+
+/* ============================= */
+/* Final "One Last Surprise"     */
+/* Stays inside the final page   */
+/* ============================= */
+
+.final-surprise{
+  display:none !important;
+  width:100%;
+  margin-top:48px;
+  text-align:center;
+}
+
+.final-surprise.show{
+  display:block !important;
+  animation:finalReveal 1s ease forwards;
+}
+
+.final-surprise.show{
+  display:block;
+  animation:finalReveal 1s ease forwards;
+}
+
+.kiss-reveal{
+  width:100%;
+  text-align:center;
+  padding:10px 0 45px;
+}
+
+.kiss-reveal img{
+  width:min(680px,92vw);
+  max-height:70vh;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+  border-radius:24px;
+  box-shadow:0 20px 90px #0009;
+}
+
+.kiss-reveal h1{
+  margin-top:28px;
+  font-family:"Great Vibes",cursive;
+  font-size:clamp(5rem,14vw,10rem);
+  line-height:.9;
+  color:var(--rose);
+  text-shadow:0 0 35px #ff6fae88;
+}
+
+.kiss-reveal p{
+  margin-top:18px;
+  color:#e7d8e3;
+  font-size:1.1rem;
+}
+
+@keyframes finalReveal{
+  from{opacity:0;transform:translateY(25px) scale(.96)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="stars"></div><div class="glow"></div><div class="glow g2"></div><div id="progress"></div>
+
+<canvas id="confetti"></canvas>
+
+<div id="toast"></div>
+
+
+
+<section id="music-gate">
+
+  <div class="music-gate-card">
+
+    <div class="music-note">♪ ♫ ♪</div>
+
+    <div class="eyebrow">before you enter your little universe</div>
+
+    <h1 class="serif">This song is for you,<br><span style="color:var(--rose)">Amber.</span></h1>
+
+    <p>I wanted this to be the first thing you hear. Put your headphones on, press play, and then scroll down when you're ready. ♡</p>
+
+    <div class="song-player">
+
+      <div class="song-label">This song is dedicated to you my love. 🎵 </div>
+
+      <audio id="birthdaySong" controls preload="metadata">
+
+        <source src="Liang_Liang.mp3" type="audio/mpeg">
+
+      </audio>
+
+    </div>
+
+    <button class="btn primary" id="startMusic">♡ Play our song & enter</button>
+
+    <div class="music-status" id="musicStatus">Press play — the song will continue while you scroll ↓</div>
+
+  </div>
+
+</section>
+
+
+
+<section id="intro">
+
+  <div class="intro-orbit"></div>
+
+  <div class="intro-copy">
+
+    <div class="heart">♡</div>
+
+    <div class="eyebrow">a little universe made for one girl</div>
+
+    <h1 class="serif">Happy Birthday,<br><span>Amber</span></h1>
+
+    <p class="lead" style="margin:30px auto">Before you scroll… take a breath. This isn't just a birthday card. It's a tiny place I made for you.</p>
+
+    <button class="btn primary" onclick="go('letter')">Open your birthday ♡</button>
+
+  </div>
+
+  <div class="scrollhint">SCROLL INTO YOUR LITTLE UNIVERSE ↓</div>
+
+</section>
+
+
+
+<section id="letter">
+
+<div class="container">
+
+<div class="eyebrow">page one · from my heart</div>
+
+<div class="story-grid">
+
+  <article class="card letter">
+
+    <h2 class="serif">To<br><span style="color:var(--rose)"> most beautiful Amber.</span></h2>
+
+    <p>Jan, I don't think I could ever fit everything I feel for you into one letter. But if there is one thing I want you to know today, it's this: <b>I adore you.</b></p>
+
+    <p>You are so much more amazing than you give yourself credit for. I wish you could see yourself through my eyes for just one moment. You'd see the girl I look at and think, “how did I get this lucky?”</p>
+
+    <p>I love your heart, your softness, your little ways of being you. I love the person you are, not some perfect version of you. Please don't let the little things you dislike about yourself make you forget how beautiful you are.</p>
+
+    <p>There are still so many pages of our story that haven't been written yet. I don't know what every page will hold, but I hope we fill them slowly, honestly, and together — until one day we look back and realize that somewhere along the way, we created our own little world.</p>
+
+    <p>Amber, I hope you'll know that loving you was never a small part of my life. You became one of my favourite parts of it.</p>
+
+    <div class="signature">Always yours, Chandan ♡</div>
+
+  </article>
+
+  <aside class="card quote-card">
+
+    <div class="eyebrow">Remember Amber,</div>
+
+    <div class="quote">“I hope you always feel safe being completely yourself with me. <em>You never have to hide any part of who you are. I want all of you, exactly as you are.</em>”</div>
+
+    <div style="margin-top:35px;color:#9f93a5;line-height:1.7">Distance can keep our hands apart for now,<br>but it has never been able to keep my heart away from you.</div>
+
+  </aside>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="reasons">
+
+<div class="container">
+
+<div class="eyebrow">page two · things I adore about you</div>
+
+<h2 class="serif">You are more<br><span style="color:var(--rose)">than you know.</span></h2>
+
+<div class="reasons">
+
+  <div class="reason"><span>♡</span><b>Your heart</b><p>The way you care, love and feel things so deeply is one of the most beautiful things about you.</p></div>
+
+  <div class="reason"><span>✦</span><b>Your softness</b><p>There is something about your presence that makes ordinary moments feel warmer and more special.</p></div>
+
+<div class="reason"><span>∞</span><b>The way you inspire me</b><p>You inspire me in more ways than I can explain. You make me want to grow, create, dream bigger, try new things, and become a better version of myself every day.</p></div><div style="margin-top:45px;color:#aaa0ae;max-width:650px;line-height:1.8">And yes, I know you might disagree with all of this. That's okay. I don't need you to agree. I'll just keep reminding you until one day you finally see what I see.</div>
+
+</div>
+
+</section>
+
+
+
+<section id="night">
+
+<div class="container" style="text-align:center">
+
+  <div class="eyebrow">page three · a wish I keep</div>
+
+  <div class="moon"></div>
+
+  <div class="night-line">One day, under the pale moonlight…</div>
+
+  <p class="night-sub">Imagine us dancing to this music you're hearing right now. No crowd, no rush, no distance. Just us, your hands in mine, slowly dancing together under the moonlight. You in that beautiful dress that you recently got jan — and me holding your hands while we dance.</p>
+
+  <p class="night-sub" style="margin-top:20px">And you in heels gosh you'd loook sooo pretty, Amber. I can already imagine you in a beautiful dress and those heels, with me holding your hands while we dance beneath the moon. I think I'd never want that moment to end. ♡</p>
+
+  <button class="btn" onclick="moonWish()">Make a little wish with me ✨</button>
+
+</div>
+
+</section>
+
+
+
+<section id="game">
+
+<div class="container game-wrap">
+
+  <div class="eyebrow">page four · a tiny surprise</div>
+
+  <h2 class="serif">Pop the balloons<br><span style="color:var(--rose)">for your wishes.</span></h2>
+
+  <p class="lead" style="margin:18px auto">There are five hiding in here. Pop every one and I'll unlock something for you.</p>
+
+  <div class="score" id="score">0 / 5 balloons popped</div>
+
+  <div class="gamebox" id="gamebox">
+
+    <div class="balloon b1"></div><div class="balloon b2"></div><div class="balloon b3"></div><div class="balloon b4"></div><div class="balloon b5"></div>
+
+    <div style="position:absolute;inset:0;display:grid;place-items:center;color:#ffffff12;font-size:7rem;pointer-events:none">♡</div>
+
+  </div>
+
+<div class="surprise" id="surprise">
+
+  <div class="reward-title">You found them all. ♡</div>
+
+
+
+  <div class="reward-photo-wrap">
+
+    <img src="reward.jpg" alt="A little surprise from me" class="reward-photo">
+
+    <div class="heart-float heart-1">♡</div>
+
+    <div class="heart-float heart-2">♡</div>
+
+    <div class="heart-float heart-3">♡</div>
+
+    <div class="heart-float heart-4">♡</div>
+
+  </div>
+
+
+
+  <div class="reward-message">
+
+    <p>I love you, Amber.</p>
+
+    <p class="love-line">I love you. I love you. I love you. ♡</p>
+
+    <span>Muwah Muwah Muwah.💋 Scroll Down now babu</span>
+
+  </div>
+
+</div></div>
+
+</section>
+
+
+
+<section id="memories">
+
+<div class="container">
+
+<div class="eyebrow">page five · things I want with you</div>
+
+<h2 class="serif">Let's make<br><span style="color:var(--rose)">a thousand memories.</span></h2>
+
+<div class="timeline">
+
+  <div class="card moment">
+
+  <h3>Cook something together 🍳</h3>
+
+  <p>I want us to make something together someday, probably make a complete mess of the kitchen, steal bites from each other, i feed you with my own hands that'd be cute no? hehe.</p>
+
+</div>
+
+
+
+<div class="card moment">
+
+  <h3>Our first little adventure 🚗</h3>
+
+  <p>Let's pick a place neither of us has been to, get lost somewhere along the way, stop wherever looks interesting, take terrible pictures, and come home with a story we'll keep telling each other.</p>
+
+</div>
+
+
+
+<div class="card moment">
+  <h3>A garden made for you 🌸</h3>
+  <p>One day, I want to walk with you through a beautiful garden filled with flowers, letting you stop at every one you like while I secretly remember your favourites. Then I'll bring you one home just because it reminded me of you.</p>
+</div>
+
+
+
+  <div class="card moment"><h3>Stay my favourite person ♡</h3><p>Wherever life takes us, I want to keep choosing you, caring for you, cheering for you and reminding you that you're more wonderful than you sometimes believe.</p></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="final" class="final">
+
+<div class="container">
+
+  <div class="final-heart">♡</div>
+
+  <div class="eyebrow">last page · but not the end</div>
+
+  <h2 class="serif">Happy Birthday,<br><span style="color:var(--rose)">my love.</span></h2>
+
+  <p>May this year bring you softer mornings, beautiful surprises, reasons to laugh until your cheeks hurt, and every little thing your heart has been waiting for.</p>
+
+  <p>And selfishly… I hope it gives me more time with you. More songs. More conversations. More memories. More moments where I get to see that beautiful smile of yours.</p>
+
+  <div class="final-sign">I love you, babu ♡</div>
+
+
+
+<div style="margin-top:35px">
+
+  <button class="btn primary" onclick="openFinalSurprise()">One last surprise ✨</button>
+
+</div>
+
+
+
+<!-- ONE LAST SURPRISE -->
+<div id="finalSurprise" class="final-surprise">
+  <div class="kiss-reveal">
+    <img src="kiss.gif" alt="Muwaah ♡">
+    <h1>Muwaahhh 💋</h1>
+    <p>One for every time I wished I could kiss you through the screen. ♡</p>
+  </div>
+</div>
+
+</section>
+
+
+
+<script>
+
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+
+function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+
+const birthdaySong=document.getElementById('birthdaySong');
+
+const startMusic=document.getElementById('startMusic');
+
+if(birthdaySong && startMusic){
+
+  birthdaySong.volume=0.9;
+
+  startMusic.addEventListener('click',async()=>{
+
+    try{await birthdaySong.play();document.getElementById('musicStatus').textContent='Playing for you ♡ Keep listening as you scroll ↓';startMusic.textContent='♡ Keep listening — enter';setTimeout(()=>go('intro'),300);}
+
+    catch(e){document.getElementById('musicStatus').textContent='Press the play button above first, then enter ♡';}
+
+  });
+
+}
+
+window.addEventListener('scroll',()=>{$('#progress').style.width=(scrollY/(document.body.scrollHeight-innerHeight)*100)+'%'});
+
+function toast(t){$('#toast').textContent=t;$('#toast').classList.add('toast-show');setTimeout(()=>$('#toast').classList.remove('toast-show'),2600)}
+
+let popped=0;
+
+$$('.balloon').forEach(b=>b.addEventListener('click',()=>{
+
+ if(b.dataset.done)return;b.dataset.done=1;popped++;b.style.animation='none';b.style.transform='scale(.1)';b.style.opacity=0;$('#score').textContent=`${popped} / 5 balloons popped`;
+
+ confetti(28);
+
+ if(popped===5){$('#surprise').classList.add('show');toast('You found your surprise ♡')}
+
+}));
+
+function moonWish(){toast('Close your eyes for a second… I’m wishing for the day we can do this together. 🌙');confetti(50)}
+
+function celebrate(){confetti(260);toast('Happy birthday, Amber ♡');setTimeout(()=>toast('Your Jinshi— no, Chandan 😭— loves you endlessly.'),2800)}
+
+function confetti(n=100){
+
+ const c=$('#confetti'),ctx=c.getContext('2d');c.width=innerWidth;c.height=innerHeight;
+
+ const bits=Array.from({length:n},()=>({x:innerWidth/2+(Math.random()-.5)*80,y:innerHeight*.35,vx:(Math.random()-.5)*10,vy:Math.random()*-10-3,g:0.25,s:Math.random()*8+4,r:Math.random()*6,life:1,rot:Math.random()*6}));
+
+ let f=0;function draw(){ctx.clearRect(0,0,c.width,c.height);bits.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=p.g;p.r+=.12;p.life-=.008;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.r);ctx.globalAlpha=Math.max(0,p.life);ctx.fillStyle=['#ff75ae','#ffd47d','#b9a4ff','#fff1f7','#75dcd5'][Math.floor(Math.random()*5)];ctx.fillRect(-p.s/2,-p.s/2,p.s,p.s*.55);ctx.restore()});if(++f<150)requestAnimationFrame(draw);else ctx.clearRect(0,0,c.width,c.height)}draw()
+
+}
+
+setTimeout(()=>{confetti(70)},700);
+
+function openFinalSurprise() {
+
+  document.getElementById("finalSurprise").classList.add("show");
+
+}
+
+
+
+</script>
+
+</body>
+
+</html>
