@@ -1549,6 +1549,20 @@ h2{
   from{opacity:0;transform:translateY(25px) scale(.96)}
   to{opacity:1;transform:translateY(0) scale(1)}
 }
+
+/* Cute girlfriend proposal */
+.proposal-wrap{margin:38px auto 0;text-align:center}
+.proposal-question,.proposal-answer{margin:28px auto 0;animation:finalReveal .7s ease forwards}
+.proposal-question h2,.proposal-answer h2{
+  font-size:clamp(2.4rem,7vw,4.5rem);color:#ffe2f0;line-height:1.05
+}
+.proposal-buttons{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin-top:24px}
+.proposal-answer p{
+  margin:18px auto 0;color:var(--rose);font-size:clamp(1.2rem,3vw,1.8rem);
+  font-family:"Cormorant Garamond",serif
+}
+.proposal-hearts{margin-top:18px;font-size:2rem;animation:float 2s ease-in-out infinite}
+
 </style>
 
 </head>
@@ -1846,6 +1860,22 @@ h2{
     <img src="kiss.gif" alt="Muwaah ♡">
     <h1>Muwaahhh 💋</h1>
     <p>One for every time I wished I could kiss you through the screen. ♡</p>
+
+    <div class="proposal-wrap" id="proposalWrap">
+      <button class="btn primary" id="proposalStart" onclick="showProposal()">Click me 💗</button>
+      <div id="proposalQuestion" class="proposal-question hidden">
+        <h2 class="serif">Will you be my gf? 🥺💕</h2>
+        <div class="proposal-buttons">
+          <button class="btn primary" onclick="acceptProposal()">Yes 💖</button>
+          <button class="btn primary" onclick="acceptProposal()">YESSS 💗</button>
+        </div>
+      </div>
+      <div id="proposalAnswer" class="proposal-answer hidden">
+        <h2 class="serif">Yesssss!! 🥹💖</h2>
+        <p>i lovee you merii pyaarii gf &lt;3</p>
+        <div class="proposal-hearts">💕 💗 💖 💞 💘</div>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1913,6 +1943,19 @@ function openFinalSurprise() {
 
   document.getElementById("finalSurprise").classList.add("show");
 
+}
+
+function showProposal() {
+  document.getElementById("proposalStart").classList.add("hidden");
+  document.getElementById("proposalQuestion").classList.remove("hidden");
+  document.getElementById("proposalQuestion").scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+function acceptProposal() {
+  document.getElementById("proposalQuestion").classList.add("hidden");
+  document.getElementById("proposalAnswer").classList.remove("hidden");
+  confetti(260);
+  document.getElementById("proposalAnswer").scrollIntoView({behavior:"smooth", block:"center"});
 }
 
 
